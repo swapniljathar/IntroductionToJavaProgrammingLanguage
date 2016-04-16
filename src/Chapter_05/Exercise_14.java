@@ -12,23 +12,19 @@ import java.util.Scanner;
  */
 public class Exercise_14 {
     public static void main(String[] args) {
-        Scanner input = new java.util.Scanner(System.in);
-
-        System.out.print(
-                "Enter the first number: ");
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter first integer: ");
         int n1 = input.nextInt();
-
-        System.out.print(
-                "Enter the second number: ");
+        System.out.print("Enter second integer: ");
         int n2 = input.nextInt();
 
-        int d = (n1 < n2) ? n1 : n2;
-        for (; d >= 1; d--) {
-            if ((n1 % d == 0) && (n2 % d == 0)) {
-                break;
-            }
+        int gcd = n1 < n2 ? n1 : n2;
+
+        while (n1 % gcd != 0 || n2 % gcd != 0) {
+            gcd--;
         }
-        System.out.println("GCD of " + n1 + " and " + n2 + " is "
-                + d);
+        
+        System.out.println("The greatest common divisor for " + n1 +
+                " and " + n2 + " is " + gcd);
     }
 }
