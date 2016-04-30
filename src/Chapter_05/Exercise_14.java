@@ -23,7 +23,7 @@ public class Exercise_14 {
         while (n1 % gcd != 0 || n2 % gcd != 0) {
             gcd--;
         }
-        
+
         System.out.println("The greatest common divisor for " + n1 +
                 " and " + n2 + " is " + gcd);
     }
